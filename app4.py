@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/physics/standardgravity')
 def hello():
-    dict = {'value': 9.80665, 'units': 'meters/(seconds^2)', 'citation': 'http://en.wikipedia.org/wiki/Standard_gravity'};
+    dict = {'value': 9.80665, 'units': 'meters/(seconds^2)', 'citation': 'http://en.wikipedia.org/wiki/Standard_gravity','name': 'standard gravity'};
     data = json.dumps(dict)
     return data
 
