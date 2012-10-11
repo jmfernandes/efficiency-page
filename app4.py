@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/physics/standardgravity')
 def hello():
-    return '9.8'
+    dict = {'value': 9.80665, 'units': 'meters/(seconds^2)', 'citation': 'http://en.wikipedia.org/wiki/Standard_gravity'};
+    data = json.dumps(dict)
+    return data
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
