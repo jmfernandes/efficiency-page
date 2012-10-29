@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/Users/josh/ruby-sample/gasprice/venv/bin/python
+=======
+#!/Users/josh/ruby-sample/secondapp/venv/bin/python
+>>>>>>> dc26a4b3ac3380f385c0de27cb9a07fc1c760bd7
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==1.2.1','console_scripts','pip'
 __requires__ = 'pip==1.2.1'
 import sys
