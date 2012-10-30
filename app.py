@@ -7,8 +7,8 @@ class View(flask.views.MethodView):
 	def get(self):
 		return flask.render_template('efficiency.html')
 
-            def post(self):
-                retrun "works!"
+    def post(self):
+        return "works!"
 
 app.add_url_rule('/', view_func=View.as_view('main'), methods=['get','post'])
 
