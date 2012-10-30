@@ -10,7 +10,7 @@ class View(flask.views.MethodView):
     def post(self):
         return "works"
 
-app.add_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
+app.add_url_rule('/', view_func=View.as_view('main'))
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
