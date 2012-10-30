@@ -5,7 +5,7 @@ app = flask.Flask(__name__)
 
 class View(flask.views.MethodView):
 	def get(self):
-		return "Hello World!"
+		return flask.render_template('efficiency.html')
 
 app.add_url_rule('/', view_func=View.as_view('main'))
 
