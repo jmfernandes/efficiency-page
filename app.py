@@ -8,7 +8,7 @@ class View(flask.views.MethodView):
 		return flask.render_template('efficiency.html')
 
     def post(self):
-        return 'works!'
+        return str(flask.request.form['expression'])
 
 app.add_url_rule('/', view_func=View.as_view('main'), methods=['get','post'])
 
