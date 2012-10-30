@@ -6,7 +6,7 @@ app.secret_key = "bacon"
 
 class View(flask.views.MethodView):
     def get(self):
-        return flask.render_template('efficiency.html')
+        return flask.render_template('index.html')
     def post(self):
         result = eval(flask.request.form['expression'])
         flask.flash(result)
