@@ -8,9 +8,9 @@ class View(flask.views.MethodView):
     def get(self):
         return flask.render_template('index.html')
     def post(self):
-        result = eval(flask.request.form['expression'])
-        flask.flash(result)
-        return self.get()
+        #result = eval(flask.request.form['expression'])
+        #flask.flash(result)
+        return 'hello'
 
 app.add_url_rule('/', view_func=View.as_view('main'), methods=['GET', 'POST'])
 
