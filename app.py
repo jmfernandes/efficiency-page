@@ -13,17 +13,6 @@ def index():
 
 
 
-@app.route('/biological/photosynthesis_crops', endpoint='photosynthesis_crops')
-    json_file = open('templates/json/biological/photosynthesis_crops.json')
-    data = json.load(json_file)
-    json_file.close()
-    return render_template('webpage.html',data=data)
-
-@app.route('/biological/photosynthesis_sugarcane', endpoint='photosynthesis_sugarcane')
-    json_file = open('templates/json/biological/photosynthesis_sugarcane.json')
-    data = json.load(json_file)
-    json_file.close()
-    return render_template('webpage.html',data=data)
 
 
 
