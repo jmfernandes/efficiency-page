@@ -13,6 +13,13 @@ def index():
 
 """Web Pages"""
 
+@app.route('/chemical/krebs_cycle', endpoint='/chemical/krebs_cycle')
+def index():
+    json_file = open('templates/json/chemical/krebs_cycle.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
 @app.route('/biological/photosynthesis_crops', endpoint='/biological/photosynthesis_crops')
 def index():
     json_file = open('templates/json/biological/photosynthesis_crops.json')
@@ -28,6 +35,10 @@ def index():
     return render_template('webpage.html',data=data)
 
 """JSON Pages"""
+
+@app.route('/chemical/krebs_cycle_json', endpoint='/chemical/krebs_cycle_json')
+def index():
+    return render_template('json/chemical/krebs_cycle.json')
 
 @app.route('/biological/photosynthesis_crops_json', endpoint='/biological/photosynthesis_crops_json')
 def index():
