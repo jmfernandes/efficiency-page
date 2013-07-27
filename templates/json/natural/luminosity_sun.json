@@ -1,0 +1,9 @@
+{
+"value": 0.136,
+"symbol": "n",
+"subscript": "",
+"units": "",
+"name": "Luminous Efficiency of Class G Star", 
+"citation": "http://physics.ucsd.edu/~tmurphy/papers/lumens-per-watt.pdf",
+"url":"http://www.efficiency.datanab.net/natural/luminosity_sun_json"
+}

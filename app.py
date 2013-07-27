@@ -62,6 +62,13 @@ def index():
     json_file.close()
     return render_template('webpage.html',data=data)
 
+@app.route('/natural/luminosity_sun', endpoint='/natural/luminosity_sun')
+def index():
+    json_file = open('templates/json/natural/luminosity_sun.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
 """JSON Pages"""
 
 @app.route('/mechanical/fluorescent_json', endpoint='/mechanical/fluorescent_json')
@@ -91,6 +98,10 @@ def index():
 @app.route('/biological/photosynthesis_sugarcane_json', endpoint='/biological/photosynthesis_sugarcane_json')
 def index():
     return render_template('json/biological/photosynthesis_sugarcane.json')
+
+@app.route('/natural/luminosity_sun_json', endpoint='/natural/luminosity_sun_json')
+def index():
+    return render_template('json/natural/luminosity_sun.json')
 
 
 if __name__ == '__main__':
