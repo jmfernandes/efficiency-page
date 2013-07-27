@@ -25,7 +25,7 @@ def index():
 def index():
     return render_template('json/biological/photosynthesis_crops.json')
 
-@app.route('ç', endpoint='/biological/photosynthesis_sugarcane_json')
+@app.route('/biological/photosynthesis_sugarcane_json', endpoint='/biological/photosynthesis_sugarcane_json')
 def index():
     return render_template('json/biological/photosynthesis_sugarcane.json')
 
