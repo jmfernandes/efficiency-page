@@ -13,6 +13,34 @@ def index():
 
 """Web Pages"""
 
+@app.route('/mechanical/fluorescent', endpoint='/mechanical/fluorescent')
+def index():
+    json_file = open('templates/json/mechanical/fluorescent.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/mechanical/led', endpoint='/mechanical/led')
+def index():
+    json_file = open('templates/json/mechanical/led.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/mechanical/metal_halide', endpoint='/mechanical/metal_halide')
+def index():
+    json_file = open('templates/json/mechanical/metal_halide.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/mechanical/tungsten_bulb', endpoint='/mechanical/tungsten_bulb')
+def index():
+    json_file = open('templates/json/mechanical/tungsten_bulb.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
 @app.route('/chemical/krebs_cycle', endpoint='/chemical/krebs_cycle')
 def index():
     json_file = open('templates/json/chemical/krebs_cycle.json')
@@ -35,6 +63,22 @@ def index():
     return render_template('webpage.html',data=data)
 
 """JSON Pages"""
+
+@app.route('/mechanical/fluorescent_json', endpoint='/mechanical/fluorescent_json')
+def index():
+    return render_template('json/mechanical/fluorescent.json')
+
+@app.route('/mechanical/led_json', endpoint='/mechanical/led_json')
+def index():
+    return render_template('json/mechanical/led.json')
+
+@app.route('/mechanical/metal_halide_json', endpoint='/mechanical/metal_halide_json')
+def index():
+    return render_template('json/mechanical/metal_halide.json')
+
+@app.route('/mechanical/tungsten_bulb_json', endpoint='/mechanical/tungsten_bulb_json')
+def index():
+    return render_template('json/mechanical/tungsten_bulb.json')
 
 @app.route('/chemical/krebs_cycle_json', endpoint='/chemical/krebs_cycle_json')
 def index():
