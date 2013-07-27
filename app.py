@@ -9,17 +9,25 @@ def page_not_found(error):
 
 @app.route('/')
 def index():
-    return  render_template('efficiency.html')
+    return render_template('efficiency.html')
+
+"""Web Pages"""
 
 @app.route('/biological/photosynthesis_crops', endpoint='/biological/photosynthesis_crops')
 def index():
     json_file = open('templates/json/biological/photosynthesis_crops.json')
     data = json.load(json_file)
     json_file.close()
-    return  render_template('webpage.html',data=data)
+    return render_template('webpage.html',data=data)
 
+@app.route('/biological/photosynthesis_sugarcane', endpoint='/biological/photosynthesis_sugarcane')
+def index():
+    json_file = open('templates/json/biological/photosynthesis_sugarcane.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
 
-
+"""JSON Pages"""
 
 @app.route('/biological/photosynthesis_crops_json', endpoint='/biological/photosynthesis_crops_json')
 def index():
