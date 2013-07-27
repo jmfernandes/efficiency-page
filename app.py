@@ -27,11 +27,11 @@ def index():
 
 """JSON Pages"""
 
-@app.route('/biological/photosynthesis_crops_json', endpoint='/biological/photosynthesis_crops')
+@app.route('/biological/photosynthesis_crops_json', endpoint='/biological/photosynthesis_crops_json')
 def index():
     return render_template('json/biological/photosynthesis_crops.json')
 
-@app.route('/biological/photosynthesis_sugarcane_json', endpoint='/biological/photosynthesis_sugarcane')
+@app.route('/biological/photosynthesis_sugarcane_json', endpoint='/biological/photosynthesis_sugarcane_json')
 def index():
     return render_template('json/biological/photosynthesis_sugarcane.json')
 
