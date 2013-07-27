@@ -13,6 +13,31 @@ def page_not_found(error):
 def index():
     return  render_template('efficiency.html')
 
+"""pages"""
+
+@app.route('/biological/photosynthesis_crops', endpoint='photosynthesis_crops')
+    json_file = open('templates/json/biological/photosynthesis_crops.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+@app.route('/biological/photosynthesis_sugarcane', endpoint='photosynthesis_sugarcane')
+    json_file = open('templates/json/biological/photosynthesis_sugarcane.json')
+    data = json.load(json_file)
+    json_file.close()
+    return render_template('webpage.html',data=data)
+
+"""JSON Pages"""
+
+@app.route('/biological/photosynthesis_crops', endpoint='/biological/photosynthesis_crops')
+def index():
+    return render_template('json/biological/photosynthesis_crops.json')
+
+@app.route('/biological/photosynthesis_sugarcan', endpoint='/biological/photosynthesis_sugarcan')
+def index():
+    return render_template('json/biological/photosynthesis_sugarcane.json')
+
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
