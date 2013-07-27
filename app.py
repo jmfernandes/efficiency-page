@@ -1,7 +1,5 @@
 import os
-import json
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, json
 
 app = Flask(__name__)
 
