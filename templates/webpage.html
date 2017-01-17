@@ -27,11 +27,8 @@
     .panel-transparent {
         background: none;
     }
-    .panel-transparent .panel-heading{
+    .panel-transparent .panel-heading .panel-body{
         background: rgba(122, 130, 136, 0.2)!important;
-    }
-    .panel-transparent .panel-body{
-        background: rgba(46, 51, 56, 0.2)!important;
     }
     </style>
     </head>
@@ -86,11 +83,11 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="panel panel-transparent">
-                    <div class="page-header">
+                    <div class="panel-body">
                         <h3>{{ data['name'] }}</h3>
                     </div>
-                    <div class="row-fluid">
                         <div class="col-xs-12 col-sm-9">
+                            <br>
                             value : {{data['symbol'] }}<sub>{{data['subscript'] }}</sub> = {{ data['value'] }} {{ data['units'] }}<br>
                             citation - <a href="{{ data['citation'] }}">{{ data['citation'] }}</a> <br>
                             <h3>How To Use</h3>
@@ -103,10 +100,9 @@
                                 data = json.loads(unpacked)
                             </div>
                             Now, you are free to reference data['value'] to use the number.
-                            </div>
                         </div>
-                    </div><!--/row-->
-                </div><!--/span-->
+                    </div>
+                </div><!--/row-->
             </div><!--/row-->
         </div><!--/.fluid-container-->
 
