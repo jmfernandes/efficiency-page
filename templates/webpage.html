@@ -91,7 +91,7 @@
                             value : {{data['symbol'] }}<sub>{{data['subscript'] }}</sub> = {{ data['value'] }} {{ data['units'] }}<br>
                             citation - <a href="{{ data['citation'] }}">{{ data['citation'] }}</a> <br>
                             <h3>How To Use</h3>
-                            Reference the url "{{ data['url'] }}" in order to extract the JSON data. For example, if you wanted to get the variable in a Python script you would do:
+                            Reference the url "{{ data['url'] }}" in order to extract the JSON data. This website uses CloudFlare for DNS hosting, so normal web scraping may not work. For example, if you wanted to get the variable in a Python script you would do:
                             <div class="well well-small">
                                 import cfscrape,json<br>
                                 scraper = cfscrape.create_scraper() # returns a CloudflareScraper instance<br>
