@@ -94,7 +94,7 @@ def index():
 def index():
     return render_template('json/mechanical/tungsten_bulb.json')
 
-@app.route('/chemical/krebs_cycle.json', endpoint='/chemical/krebs_cycle.json')
+@app.route('/chemical/krebs_cycle_json', endpoint='/chemical/krebs_cycle_json')
 def index():
     return render_template('json/chemical/krebs_cycle.json')
 
