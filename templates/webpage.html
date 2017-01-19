@@ -93,11 +93,11 @@
                             <h3>How To Use</h3>
                             Reference the url "{{ data['url'] }}" in order to extract the JSON data. For example, if you wanted to get the variable in a Python script you would do:
                             <div class="well well-small">
-                                import json<br>
-                                import urllib<br>
-                                aquire = urllib.urlopen("{{ data['url'] }}")<br>
-                                unpacked = aquire.read()<br>
-                                data = json.loads(unpacked)
+                                import cfscrape,json<br>
+                                scraper = cfscrape.create_scraper() # returns a CloudflareScraper instance<br>
+                                unpacked = scraper.get("{{ data['url'] }}").content #scaps webpage<br>
+                                data = json.loads(unpacked) #converts to json<br>
+                                print data['value'] #or whatever object you want
                             </div>
                             Now, you are free to reference data['value'] to use the number.
                         </div>
