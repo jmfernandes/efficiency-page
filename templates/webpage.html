@@ -95,7 +95,7 @@
                             <div class="well well-small">
                                 import cfscrape,json<br>
                                 scraper = cfscrape.create_scraper() # returns a CloudflareScraper instance<br>
-                                unpacked = scraper.get("{{ data['url'] }}").content #scaps webpage<br>
+                                unpacked = scraper.get("{{ data['url'] }}").content #scraps webpage<br>
                                 data = json.loads(unpacked) #converts to json<br>
                                 print data['value'] #or whatever object you want
                             </div>
